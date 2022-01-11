@@ -308,9 +308,10 @@ section.category {
     }
     .filters {
         display: flex;
+        flex-wrap: wrap;
         margin: 0 -7px;
-        margin-top: 45px;
-        .filter {
+        margin-top: 15px;
+        .widget {
             flex-grow: 1;
             padding: 0 7px;
 
@@ -338,9 +339,83 @@ section.category {
         }
 
         .widget {
-            flex-grow: 1;
-            padding: 0 7px;
+            margin-top: 25px;
         }
+
+        .widget-title {
+            @include f-b;
+            font-size: 16px;
+            color: #626469;
+            margin-bottom: 5px;
+        }
+
+        .price_slider_wrapper {
+            max-width: 320px;
+        }
+        ul {
+            display: flex;
+            justify-content: flex-start;
+            li {
+                text-align: center;
+                padding: 10px;
+                @include f-r;
+                font-size: 16px;
+                color: #000;
+
+                &.current-cat, &.chosen {
+                    color: #f1ab6e;
+                }
+                .children {
+                    display: none;
+                }
+                .icon {
+                    @include flex-center;
+                    height: 60px;
+                    width: 65px;
+                    margin: auto;
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                .count {
+                    float: none;
+                    font-size: 14px;
+                    color: #d3d3d3;
+                }
+            }
+        }
+
+        #woocommerce_product_categories-2 {
+            width: 100%;
+            ul{
+                justify-content: center;
+                width: 100%;
+                .cat-item {
+                    padding: 15px;
+                    background: #F6F8F9;
+                    margin: 0 2%;
+                    .icon {
+                        height: 65px;
+                    }
+
+                    &.current-cat {
+                        background: #fff;
+                        box-shadow: 7px 5px 30px rgba(0,0,0,0.15);
+                    }
+                }
+            }
+        }
+
+        #woocommerce_layered_nav-3 {
+            border-bottom: 1px solid #D5D5D5;
+            width: 100%;
+            ul {
+                justify-content: center;
+            }
+        }
+
+        
 
 
     }

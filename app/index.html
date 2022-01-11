@@ -413,6 +413,7 @@
 						</div>
 					</div>
 					<div class="navigation">
+						<div class="swiper-pagination"></div>
 						<div class="products-prev">
 							<img src="images/icons/swiper-right.png" alt="">
 						</div>
@@ -647,7 +648,9 @@
 							</div>
 						</div>
 					</div>
+					
 					<div class="navigation">
+						<div class="swiper-pagination"></div>
 						<div class="products-prev">
 							<img src="images/icons/swiper-right.png" alt="">
 						</div>
@@ -659,6 +662,7 @@
 							<img src="images/icons/swiper-left.png" alt="">
 						</div>
 					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -939,6 +943,11 @@
 					0: {
 						slidesPerView: 2,
 						spaceBetween: 10,
+						loop: false,
+						pagination: {
+							el: '.swiper-pagination',
+							type: 'progressbar',
+						},
 					},
 					950: {
 						slidesPerView: 3,
@@ -967,6 +976,11 @@
 					0: {
 						slidesPerView: 2,
 						spaceBetween: 10,
+						loop: false,
+						pagination: {
+							el: '.swiper-pagination',
+							type: 'progressbar',
+						},
 					},
 					950: {
 						slidesPerView: 3,

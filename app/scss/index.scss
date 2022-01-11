@@ -567,8 +567,10 @@ header {
         padding: 55px 0;
         .boxes {
             margin-top: 0px;
+            justify-content: center;
             .box {
                 width: 50%;
+                max-width: 181px;
                 &:nth-child(2n), &:nth-child(5n){
                     transform: translateY(0px);
                 }
@@ -576,7 +578,35 @@ header {
                     transform: translateY(0px);
                 }
                 .inner {
-                    padding: 15px;
+                    padding: 0px;
+                    background: none;
+                    border: none;
+                }
+
+                .image {
+                    width: auto;
+                    height: 165px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .text { 
+                    color: #fff;
+                    font-size: 18px;
+                    &:before {
+                        background: #476b8f;
+                    }
+                }
+            }
+        }
+
+        &.inner {
+            .box {
+                .text { 
+                    color: #27282A;
+                    &:before {
+                        background: #dce3eb;
+                    }
                 }
             }
         }
@@ -627,6 +657,9 @@ header {
             .products-prev, .products-next {
                 padding: 10px;
                 cursor: pointer;
+                @media only screen and (max-width : $mw) {
+                    display: none;
+                }
             }
             .caption {
                 .title {
@@ -638,6 +671,16 @@ header {
                     @include f-l;
                     font-size: 18px;
                     color: #27282A;
+                }
+            }
+
+            .swiper-pagination-progressbar {
+                width: 100%;
+                height: 8px;
+                left: 0;
+                top: 0;
+                .swiper-pagination-progressbar-fill {
+                    background: #2B3A55;
                 }
             }
         }
